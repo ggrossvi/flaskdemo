@@ -1,2 +1,13 @@
-<h1> hello</h1>
-<p> Trying out Flask templates</p>
+<h1> hello visitor</h1>
+<p> I'll trying out Flask templates.  It is {{ random_weather }} today!</p>
+
+{% for this_weather in weather %}
+   if it is {{ this_weather }},
+
+    {% if this_weather == "rainy" %}
+        wait to walk the dog <br>
+    {% else %}
+        it looks like a lovely day for a walk <br>
+    {% endif %}
+
+{% endfor %}
